@@ -4,6 +4,7 @@ fairscale==0.4.4
 pycocoevalcap
 opencv-python==4.8.0.76
 ruamel.yaml==0.17.20
-
+scikit-image==0.19.3
+gensim==4.3.0
 underthesea
 gdown
