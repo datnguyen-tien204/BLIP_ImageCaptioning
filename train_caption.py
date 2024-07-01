@@ -39,7 +39,7 @@ def train(model, data_loader, optimizer, epoch, device):
     metric_logger.add_meter('lr', utils.SmoothedValue(window_size=1, fmt='{value:.6f}'))
     metric_logger.add_meter('loss', utils.SmoothedValue(window_size=1, fmt='{value:.4f}'))
     header = 'Train Caption Epoch: [{}]'.format(epoch)
-    print_freq = 500
+    print_freq = 50
 
     for i, (image, caption, _) in enumerate(metric_logger.log_every(data_loader, print_freq, header)):
         image = image.to(device)       
