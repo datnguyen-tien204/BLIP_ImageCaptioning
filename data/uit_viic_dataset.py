@@ -56,7 +56,7 @@ class uit_viic_dataset_val(Dataset):
     
     def __getitem__(self, index):    
         
-        image_path = self.annotations[index]['image']
+        image_path = os.path.join(self.image_root,self.annotations[index]['image'])
         image_id = image_path.split('/')[-1].split('.')[0]
         while image_id[0] == '0':
             image_id = image_id[1:]
@@ -64,4 +64,3 @@ class uit_viic_dataset_val(Dataset):
         image = self.transform(image)
 
         return image, int(image_id)
-    
